@@ -72,7 +72,7 @@ class Trie():
     def add_url(self, url):
         
         text = requests.get(url).text
-        text = text.replace("\n","").replace("\r","").replace("\ufeff","")
+        text = text.replace("\n","").replace("\r","").replace("\ufeff","").upper()
         word_list = text.split(" ")
         
         for word in word_list:

@@ -8,7 +8,7 @@ req.close()
 req.text
 
 #Tira caracter de txt feio
-text = req.text.replace("\n","").replace("\r","").replace("\ufeff","")
+text = req.text.replace("\n","").replace("\r","").replace("\ufeff","").upper()
 #Transforma em lista de palavras
 word_list = text.split(" ")
 #Remove palavras duplicadas e só pega quem tem >3 caracteres
@@ -33,6 +33,6 @@ while loop:
         
     elif user_input.lower() == "word":
         user_input = input("Digite a palavra a ser procurada:\n")
-        trie_tree.display_word(user_input)
+        trie_tree.display_word(user_input.upper())
         
     print("\n\n")
